@@ -1,0 +1,52 @@
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 200, 25, 0.9);
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 8vh 69vh 16vh;
+    grid-gap: 10px;
+    grid-template-areas: "header header" "aside main" "footer footer";
+}
+
+.titulo {
+    grid-area: header;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+h3 {
+    font-size: 20pt;
+}
+
+.lista {
+    color: blue;
+    background-color: rgba(245, 245, 245, 0.7);
+    border-radius: 10px;
+    grid-area: aside;
+}
+
+.jogo {
+    background-color: rgba(245, 245, 245, 0.7);
+    border-radius: 10px;
+    grid-area: main;
+}
+
+.descricao {
+    background-color: rgba(245, 245, 245, 0.7);
+    border-radius: 10px;
+    grid-area: footer;
+}
+
+iframe {
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}

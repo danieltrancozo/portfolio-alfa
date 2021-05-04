@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0.35%;
+}
+
+body {
+    height: 100%;
+    text-align: center;
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+}
+
+section {
+    background: linear-gradient(to top, rgba(255, 255, 0, 0.453), rgba(192, 192, 192, 0.453), rgba(255, 255, 255, 0.453));
+    border-radius: 50%;
+    padding: 10px;
+    height: 450px;
+    width: 450px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.61);
+}
+
+div {
+    margin-top: auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+img {
+    border-radius: 50%;
+}

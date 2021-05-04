@@ -1,0 +1,117 @@
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 200, 25, 0.9);
+    text-align: center;
+}
+
+.lista {
+    position: absolute;
+    left: 3%;
+    height: 88%;
+    width: 25%;
+    top: 9%;
+    background-color: rgba(220, 220, 220, 0.9);
+    border-radius: 5px;
+}
+
+#jogo {
+    position: absolute;
+    left: 30%;
+    height: 55%;
+    width: 68%;
+    top: 9%;
+    background-color: rgba(220, 220, 220, 0.9);
+    border-radius: 5px;
+}
+
+#descricao {
+    position: absolute;
+    left: 30%;
+    height: 30%;
+    width: 68%;
+    top: 67%;
+    background-color: rgba(220, 220, 220, 0.9);
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+h3 {
+    font-size: 20pt;
+}
+
+ol {
+    text-align: left;
+    left: 10%;
+    position: relative;
+    text-transform: capitalize;
+}
+
+#camada2 {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(224, 224, 225, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#titulo {
+    font-size: 20pt;
+    position: absolute;
+    left: 3%;
+    top: 2%;
+    background-color: transparent;
+    color: lightgreen;
+}
+
+#exit {
+    font-size: 30pt;
+    position: absolute;
+    right: 5%;
+    top: 1%;
+    background-color: rgb(225, 25, 25);
+    color: rgb(100, 10, 225);
+    width: 50px;
+    height: 50px;
+    padding: auto;
+    border-radius: 50%;
+}
+
+#quadro {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+#nome {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+    width: 5%;
+    height: 5%;
+}
+
+.q3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+iframe {
+    border: none;
+}

@@ -1,0 +1,29 @@
+[{
+    "titulo": {
+        "t1": "Meu Site",
+        "t2": "App da Calculadora",
+        "t3": "App do chat",
+        "t4": "Jogo da cobra",
+        "t5": "Jogo do Mário",
+        "t6": "Jogo do Pacman",
+        "t7": "App do Relógio"
+    },
+    "main": {
+        "t1": "<h2>Selecione a aplicação do meu portifólio que deseja testar clicando no item da lista: </br></h2>",
+        "t2": "<iframe src='apps/calculadora.html'></iframe>",
+        "t3": "<iframe src='apps/chat.html'></iframe>",
+        "t4": "<iframe src='apps/cobra.html'></iframe>",
+        "t5": "<iframe src='apps/mario.html'></iframe>",
+        "t6": "<iframe src='apps/pacman.html'></iframe>",
+        "t7": "<iframe src='apps/relogio.html'></iframe>"
+    },
+    "footer": {
+        "t1": "<h3>Este site tem o objetivo de servir como portifólio do que eu aprendi sobre desenvolvimento web, gamedev e desenvolvimento de aplicações.</h3>",
+        "t2": "<h3></h3>",
+        "t3": "<h3></h3>",
+        "t4": "<h3></h3>",
+        "t5": "<h3></h3>",
+        "t6": "<h3></h3>",
+        "t7": "<h3></h3>"
+    }
+}]
