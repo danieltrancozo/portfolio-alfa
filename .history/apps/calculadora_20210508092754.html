@@ -1,0 +1,128 @@
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .button {
+            width: 50;
+            height: 50;
+            font-size: 25;
+            margin: 2;
+            cursor: pointer;
+            background: #607d8b;
+            border: none;
+        }
+        .text {
+            width: 328;
+            margin: 5;
+            font-size: 25;
+            padding: 5;
+            border: none;
+            color: #607d8b;
+        }
+        .main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .bg {
+            background: linear-gradient(to right, rgb(89, 0, 255), rgb(248, 9, 9));
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="main">
+        <form name='form'>
+            <input class="text" name="text">
+        </form>
+        <table>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="ins(7)"></td>
+                <td><input class="button" type="button" value="8" onclick="ins(8)"></td>
+                <td><input class="button" type="button" value="9" onclick="ins(9)"></td>
+                <td><input class="button" type="button" value="+" onclick="ins('+')"></td>
+                <td><input class="button" type="button" value="(" onclick="ins('(')"></td>
+                <td><input class="button" type="button" value="!" onclick="factorial()"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="ins(4)"></td>
+                <td><input class="button" type="button" value="5" onclick="ins(5)"></td>
+                <td><input class="button" type="button" value="6" onclick="ins(6)"></td>
+                <td><input class="button" type="button" value="-" onclick="ins('-')"></td>
+                <td><input class="button" type="button" value=")" onclick="ins(')')"></td>
+                <td><input class="button" type="button" value="v" onclick="rais()"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="ins(1)"></td>
+                <td><input class="button" type="button" value="2" onclick="ins(2)"></td>
+                <td><input class="button" type="button" value="3" onclick="ins(3)"></td>
+                <td><input class="button" type="button" value="x" onclick="ins('*')"></td>
+                <td><input class="button" type="button" value="<" onclick="back()"></td>
+                <td><input class="button" type="button" value="^" onclick="ins('**')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="0" onclick="ins(0)"></td>
+                <td><input class="button" type="button" value="." onclick="ins('.')"></td>
+                <td><input class="button" type="button" value="c" onclick="clean()"></td>
+                <td><input class="button" type="button" value="/" onclick="ins('/')"></td>
+                <td><input class="button" type="button" value="=" onclick="res()"></td>
+                <td><input class="button" type="button" value="F" onclick="fat()"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var calc = document.querySelector('input.text');
+        var a = calc.value;
+        function modtext(i) {
+            calc.value = i;
+            a = calc.value;
+        }
+        function ins(num) {
+            a = a + "" + num;
+            modtext(a);
+        }
+        function res() {
+            a = eval(a);
+            modtext(a);
+        }
+        function clean() {
+            a = "";
+            modtext(a);
+        }
+        function back() {
+            var exp = a;
+            a = exp.substring(0, exp.length - 1);
+            modtext(a);
+        }
+        function factorial() {
+            a = eval(a);
+            let n = Number(a);
+            let fat = 1;
+            while (n > 1) {
+                fat *= n;
+                n--;
+            }
+            modtext(fat);
+        }
+        function rais() {
+            let n = Number(a);
+            n = Math.sqrt(n);
+            modtext(n);
+        }
+        function fat() {
+            let n = Number(a);
+            let c = 1;
+            while (n > 1) {
+                n /= c;
+                c++;
+            }
+            modtext(c - 1);
+        }
+    </script>
+</body>
+</html>
