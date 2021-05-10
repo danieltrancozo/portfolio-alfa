@@ -1,4 +1,4 @@
-export function convert(a){
+function convert(a){
     var request = new XMLHttpRequest();
     var adress = a;
     var info;
@@ -6,6 +6,5 @@ export function convert(a){
     request.onload = function() {
         info = JSON.parse(request.responseText);
         console.log(info);
-        return (info);
     }
-}
+} 

@@ -43,7 +43,6 @@
             request.onload = function() {
                 info = JSON.parse(request.responseText);
                 console.log(info);
-                peek(0);
             }
             request.send();
 
@@ -101,6 +100,7 @@
                 var title = document.getElementById('titulo');
                 title.innerHTML = a
             }
+            peek(0);
         </script>
     </div>
 </body>

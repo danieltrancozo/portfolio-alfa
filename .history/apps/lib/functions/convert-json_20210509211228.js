@@ -1,4 +1,4 @@
-export function convert(a){
+function convert(a){
     var request = new XMLHttpRequest();
     var adress = a;
     var info;

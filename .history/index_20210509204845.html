@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta charset="UFT-8">
+<meta name="lenguage" content="pt-br">
+<meta name="autor" content="Daniel Trancozo Vianna">
+<meta name="description" content="Portifolio de Desenvolvedor Web">
+<meta name="keywords" content="HTML, CSS, JS, web development, portifolio">
+<html>
+
+<head>
+    <title>Minha P&aacutegina</title>
+    <link rel="stylesheet" type="text/css" href="css\estilo2.css">
+</head>
+
+<body>
+    <div class='container'>
+        <header class="titulo">
+            <h1 id="titulo"></h1>
+        </header>
+        <aside class="lista" id="lista">
+            <h2>Lista:
+                <h3>
+                    <ul>
+                        <li onclick="peek(1)">calc</li>
+                        <li onclick="peek(2)">chat</li>
+                        <li onclick="peek(3)">cobra</li>
+                        <li onclick="peek(4)">mario</li>
+                        <li onclick="peek(5)">pacman</li>
+                        <li onclick="peek(6)">re&oacutegio</li>
+                        <li onclick="peek(0)">retorne</li>
+                    </ul>
+                </h3>
+            </h2>
+        </aside>
+        <main class="jogo" id="jogo">
+        </main>
+        <footer class="descricao" id="descricao">
+        </footer>
+        <script>
+            var request = new XMLHttpRequest();
+            var adress = "https://raw.githubusercontent.com/danieltrancozo/portfolio-alfa.github.io/main/textos.json";
+            var info;
+            request.open('GET', adress, true);
+            request.onload = function() {
+                info = JSON.parse(request.responseText);
+                console.log(info);
+            }
+            peek(0);
+            request.send();
+
+            function peek(a) {
+                switch (a) {
+                    case 1:
+                        titulo(info[0].titulo.t2);
+                        tela(info[0].main.t2);
+                        text(info[0].footer.t2);
+                        break;
+                    case 2:
+                        titulo(info[0].titulo.t3);
+                        tela(info[0].main.t3);
+                        text(info[0].footer.t3);
+                        break;
+                    case 3:
+                        titulo(info[0].titulo.t4);
+                        tela(info[0].main.t4);
+                        text(info[0].footer.t4);
+                        break;
+                    case 4:
+                        titulo(info[0].titulo.t5);
+                        tela(info[0].main.t5);
+                        text(info[0].footer.t5);
+                        break;
+                    case 5:
+                        titulo(info[0].titulo.t6);
+                        tela(info[0].main.t6);
+                        text(info[0].footer.t6);
+                        break;
+                    case 6:
+                        titulo(info[0].titulo.t7);
+                        tela(info[0].main.t7);
+                        text(info[0].footer.t7);
+                        break;
+                    default:
+                        titulo(info[0].titulo.t1);
+                        tela(info[0].main.t1);
+                        text(info[0].footer.t1);
+                        break;
+                }
+            }
+
+            function tela(a) {
+                var quadro = document.getElementById('jogo');
+                quadro.innerHTML = a;
+            }
+
+            function text(a) {
+                var text = document.getElementById('descricao');
+                text.innerHTML = a
+            }
+
+            function titulo(a) {
+                var title = document.getElementById('titulo');
+                title.innerHTML = a
+            }
+        </script>
+    </div>
+</body>
+
+</html>
