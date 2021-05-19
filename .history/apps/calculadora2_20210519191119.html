@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style/calc.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="main">
+        <form name='form'>
+            <input class="text" name="text">
+        </form>
+        <table>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="modtext(calc,ins(calc.value,'7'))"></td>
+                <td><input class="button" type="button" value="8" onclick="modtext(calc,ins(calc.value,'8'))"></td>
+                <td><input class="button" type="button" value="9" onclick="modtext(calc,ins(calc.value,'9'))"></td>
+                <td><input class="button" type="button" value="+" onclick="modtext(calc,ins(calc.value,'+'))"></td>
+                <td><input class="button" type="button" value="(" onclick="modtext(calc,ins(calc.value,'('))"></td>
+                <td><input class="button" type="button" value="!" onclick="modtext(calc,myMath('factorial',calc.value))"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="modtext(calc,ins(calc.value,'4'))"></td>
+                <td><input class="button" type="button" value="5" onclick="modtext(calc,ins(calc.value,'5'))"></td>
+                <td><input class="button" type="button" value="6" onclick="modtext(calc,ins(calc.value,'6'))"></td>
+                <td><input class="button" type="button" value="-" onclick="modtext(calc,ins(calc.value,'-'))"></td>
+                <td><input class="button" type="button" value=")" onclick="modtext(calc,ins(calc.value,')'))"></td>
+                <td><input class="button" type="button" value="v" onclick="modtext(calc,myMath('root',calc.value))"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="calculator(1)"></td>
+                <td><input class="button" type="button" value="2" onclick="modtext(calc,ins(calc.value,'2️'))"></td>
+                <td><input class="button" type="button" value="3" onclick="modtext(calc,ins(calc.value,'3'))"></td>
+                <td><input class="button" type="button" value="x" onclick="modtext(calc,ins(calc.value,'*'))"></td>
+                <td><input class="button" type="button" value="<" onclick="modtext(calc,myMath('back',calc.value))"></td>
+                <td><input class="button" type="button" value="^" onclick="modtext(calc,ins(calc.value,'**'))"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="0" onclick="modtext(calc,ins(calc.value,'0'))"></td>
+                <td><input class="button" type="button" value="." onclick="modtext(calc,ins(calc.value,'.'))"></td>
+                <td><input class="button" type="button" value="c" onclick="modtext(calc,myMath('clean',calc.value))"></td>
+                <td><input class="button" type="button" value="/" onclick="modtext(calc,ins(calc.value,'/'))"></td>
+                <td><input class="button" type="button" value="=" onclick="modtext(calc,myMath('res',calc.value))"></td>
+                <td><input class="button" type="button" value="F" onclick="modtext(calc,myMath('fat',calc.value))"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var calc = document.querySelector('input.text');
+    </script>
+</body>
+</html>

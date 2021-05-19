@@ -15,7 +15,7 @@
                 <td><input class="button" type="button" value="9" onclick="calc.value+=9"></td>
                 <td><input class="button" type="button" value="+" onclick="calc.value+='+'"></td>
                 <td><input class="button" type="button" value="(" onclick="calc.value+='('"></td>
-                <td><input class="button" type="button" value="!" onclick="calc.value = factorial(calc.value)"></td>
+                <td><input class="button" type="button" value="!" onclick="modtext(calc,myMath('factorial',calc.value))"></td>
             </tr>
             <tr>
                 <td><input class="button" type="button" value="4" onclick="calc.value+=4"></td>
@@ -39,35 +39,12 @@
                 <td><input class="button" type="button" value="c" onclick="calc.value=''"></td>
                 <td><input class="button" type="button" value="/" onclick="calc.value+='/'"></td>
                 <td><input class="button" type="button" value="=" onclick="calc.value = eval(calc.value)"></td>
-                <td><input class="button" type="button" value="F" onclick="calc.value = fat(calc.value)"></td>
+                <td><input class="button" type="button" value="F" onclick="modtext(calc,myMath('fat',calc.value))"></td>
             </tr>
         </table>
     </div>
     <script>
         var calc = document.querySelector('input.text');
-        function fat(a){
-            a = Number(eval(a));
-            let count = 1;
-            while(a>1){
-                a /= count;
-                count++;
-            }
-            return (count-1);
-        }
-        function factorial(a){
-            a = Number(eval(a));
-            let fat = 1;
-            if(a<52){
-                while(a>1){
-                    fat*=a;
-                    a--;
-                }
-                return (fat);
-            }
-            else{
-                window.alert("The number is too big!");
-            }
-        }
     </script>
 </body>
 </html>
